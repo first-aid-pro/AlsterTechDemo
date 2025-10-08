@@ -1,2 +1,0 @@
-# AlsterTechDemo
-AlsterTech
