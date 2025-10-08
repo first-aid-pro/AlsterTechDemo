@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoalbum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="Bilder/BlueStar2.png">
+    <div class="background">
+        <div class="button-container">
+            <a href="" target="">
+                <button class="buttonEnd">Vollenden</button>
+            </a>
+            <a href="projectinc.html" target="">
+                <button class="buttonFuture">Anstehendes</button>
+            </a>
+            <a href="permanentproj.html" target="">
+                <button class="buttonPerma">Dauerprojekte</button>
+            </a>
+        </div>
+    </div>
+    <div class="album">
+        <img src="Bilder/AutoHaus.png" alt="Autohaus" onclick="showFullScreen(this)">
+        <img src="Bilder/Christmas.png" alt="Bild 2" onclick="showFullScreen(this)">
+        <img src="Bilder/HeißLuft.png" alt="Bild 3" onclick="showFullScreen(this)">
+        <img src="Bilder/Unicorn.png" alt="Bild 4" onclick="showFullScreen(this)">
+        <img src="Bilder/BigNews.png" alt="Bild 5" onclick="showFullScreen(this)">
+        <img src="Bilder/BlueStar.png" alt="Bild 6" onclick="showFullScreen(this)">
+       </div>
+
+    <!-- Vollbild-Container -->
+    <div id="fullscreenContainer" onclick="closeFullScreen()">
+        <img id="fullscreenImage" alt="Vollbild">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
