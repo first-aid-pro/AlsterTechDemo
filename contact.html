@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlsterTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" id="home" class="logo"><img src="img/AlsterTech.jpeg" alt="AlsterTech Logo"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="aboutUs.html">Über uns</a>
+                <ul class="dropdown">
+                    <li><a href="aboutUs.html#team">Team</a></li>
+                    <li><a href="#">Geschichte</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="shop.html">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="#">Produkte</a></li>
+                    <li><a href="#">Angebote</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="login.html">Anmeldung</a>
+                <ul class="dropdown">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Registrieren</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html">Kontakt</a>
+                <ul class="dropdown">
+                    <li><a href="contact.html#Kontaktformular">Kontaktformular</a></li>
+                    <li><a href="contact.html#impressum">Impressum</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container contact-page">
+        <header class="content contact-hero">
+            <div>
+                <h1>Kontakt</h1>
+                <p class="lead">Fragen? Feedback? Wir freuen uns auf deine Nachricht. Fülle das Formular aus oder kontaktiere uns direkt per E‑Mail oder Telefon.</p>
+            </div>
+            <div class="contact-quick">
+                <div class="contact-card">
+                    <strong>E-Mail</strong>
+                    <a href="mailto:kontakt@alstertech.de">kontakt@alstertech.de</a>
+                </div>
+                <div class="contact-card">
+                    <strong>Telefon</strong>
+                    <div>+49 176 55910989</div>
+                </div>
+                <div class="contact-card">
+                    <strong>Adresse</strong>
+                    <div>AlsterTech S-AG<br>Maurepasstraße 67<br>24558 Henstedt-Ulzburg</div>
+                </div>
+            </div>
+        </header>
+
+        <section id="Kontaktformular" class="content contact-grid">
+            <div class="contact-form">
+                <h2>Schreib uns</h2>
+                <form id="contactForm">
+                    <label>Dein Name<br><input name="name" required></label>
+                    <label>Deine E‑Mail<br><input name="email" type="email" required></label>
+                    <label>Betreff<br><input name="subject"></label>
+                    <label>Nachricht<br><textarea name="message" rows="6" required></textarea></label>
+                    <div class="form-actions">
+                        <button class="btn" type="submit">Nachricht senden</button>
+                        <button class="btn ghost" type="button" id="clearBtn">Löschen</button>
+                    </div>
+                    <p id="contactMsg" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Öffnungszeiten</h3>
+                <p>Mo–Fr: 9:00–17:00</p>
+                <h3>Soziale Medien</h3>
+                <p>
+                    <a href="https://x.com/AlsterTech">Twitter</a> • <a href="https://www.instagram.com/alster.tech/">Instagram</a>
+                </p>
+                <h3>Hinweis</h3>
+                <p>Dies ist ein Frontend‑Demo: Nachrichten werden nur lokal im Browser gespeichert (Demo) und nicht per E‑Mail versendet.</p>
+            </div>
+        </section>
+
+        <section id="impressum" class="content impressum">
+            <h2>Impressum</h2>
+            <p><strong>Angaben gemäß § 5 TMG</strong></p>
+
+            <p>
+                AlsterTech S‑AG<br>
+                Geschäftsführung: Lennart <br>
+                Maurepasstraße 67<br>
+                24558 Henstedt‑Ulzburg<br>
+                Deutschland
+            </p>
+
+            <p>
+                Kontakt:<br>
+                E‑Mail: <a href="mailto:kontakt@alstertech.de">kontakt@alstertech.de</a><br>
+                Telefon: +49 176 55910989
+            </p>
+
+            <p>
+                Handelsregister: Amtsgericht [Ort], HRB 12345<br>
+                Umsatzsteuer‑ID: DE123456789
+            </p>
+
+            <p>
+                <strong>Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:</strong><br>
+                Lennart, Maurepasstraße 67, 24558 Henstedt‑Ulzburg
+            </p>
+
+            <h3>Streitschlichtung / Online‑Streitbeilegung</h3>
+            <p>
+                Die Europäische Kommission stellt eine Plattform zur Online‑Streitbeilegung (OS) bereit:
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.
+                Wir sind grundsätzlich bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
+        </section>
+    </main>
+
+    <script src="js/contact.js"></script>
+
+    <div class="footer">
+        &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
+    </div>
+
+</body>
+</html>

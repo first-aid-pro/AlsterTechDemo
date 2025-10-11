@@ -42,24 +42,29 @@
         </ul>
     </nav>
 
-    <div class="container">
-        <header class="content">
-            <h1>Unser Shop</h1>
-            <p>Produkte von AlsterTech — hochwertig, nachhaltig und nutzerfreundlich.</p>
-        </header>
+    <div class="container auth-page">
+        <div class="content auth-box">
+            <h2>Anmelden</h2>
+            <form id="loginForm">
+                <label>Benutzername<br><input name="username" required></label><br>
+                <label>Passwort<br><input name="password" type="password" required></label><br>
+                <button class="btn" type="submit">Login</button>
+            </form>
 
-        <section class="content shop-grid" id="products">
-        </section>
+            <hr>
 
-        <aside class="cart-panel" id="cartPanel">
-            <h3>Warenkorb <span id="cartCount">(0)</span></h3>
-            <ul id="cartItems"></ul>
-            <div class="cart-total">Gesamt: <span id="cartTotal">0.00 €</span></div>
-            <button id="checkoutBtn" class="btn">Zur Kasse</button>
-        </aside>
+            <h3>Neu hier? Registrieren</h3>
+            <form id="signupForm">
+                <label>Benutzername<br><input name="username" required></label><br>
+                <label>Passwort<br><input name="password" type="password" required></label><br>
+                <button class="btn" type="submit">Sign up</button>
+            </form>
+
+            <p id="authMsg" aria-live="polite"></p>
+        </div>
     </div>
 
-    <script src="js/shop.js"></script>
+    <script src="js/auth.js"></script>
 
     <div class="footer">
         &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
