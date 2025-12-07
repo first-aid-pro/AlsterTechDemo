@@ -5,65 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlsterTech</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/favicon.ico">
+    <style>
+        .sold-out-overlay {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            transform: rotate(-45deg);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .product-card {
+            position: relative; /* needed for overlay */
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
     <a href="index.html" id="home" class="logo" aria-label="AlsterTech Logo"></a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="aboutUs.html">Über uns</a>
-                <ul class="dropdown">
-                    <li><a href="aboutUs.html#team">Team</a></li>
-                    <li><a href="#">Geschichte</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="shop.html">Shop</a>
-                <ul class="dropdown">
-                    <li><a href="#">Produkte</a></li>
-                    <li><a href="#">Angebote</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="login.html">Anmeldung</a>
-                <ul class="dropdown">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Registrieren</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="contact.html">Kontakt</a>
-                <ul class="dropdown">
-                    <li><a href="contact.html#Kontaktformular">Kontaktformular</a></li>
-                    <li><a href="contact.html#impressum">Impressum</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="aboutUs.html">Über uns</a>
+            <ul class="dropdown">
+                <li><a href="aboutUs.html#team">Team</a></li>
+                <li><a href="#">Geschichte</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="shop.html">Shop</a>
+            <ul class="dropdown">
+                <li><a href="#">Produkte</a></li>
+                <li><a href="#">Angebote</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="login.html">Anmeldung</a>
+            <ul class="dropdown">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Registrieren</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="contact.html">Kontakt</a>
+            <ul class="dropdown">
+                <li><a href="contact.html#Kontaktformular">Kontaktformular</a></li>
+                <li><a href="contact.html#impressum">Impressum</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 
-    <div class="container">
-        <header class="content">
-            <h1>Unser Shop</h1>
-            <p>Produkte von AlsterTech — hochwertig, nachhaltig und nutzerfreundlich.</p>
-        </header>
+<div class="container">
+    <header class="content">
+        <h1>Unser Shop</h1>
+        <p>Produkte von AlsterTech — hochwertig, nachhaltig und nutzerfreundlich.</p>
+    </header>
 
-        <section class="content shop-grid" id="products">
-        </section>
-
-        <aside class="cart-panel" id="cartPanel">
-            <h3>Warenkorb <span id="cartCount">(0)</span></h3>
-            <ul id="cartItems"></ul>
-            <div class="cart-total">Gesamt: <span id="cartTotal">0.00 €</span></div>
-            <button id="checkoutBtn" class="btn">Zur Kasse</button>
-        </aside>
+    <div class="disclaimer" style="margin: 10px 0; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px; text-align: center;">
+        <p>
+            Hinweis: Alle Angebote gelten nur solange der Vorrat reicht. Die Schülerfirma behält sich das Recht vor, Bestellungen abzulehnen oder Angebote ohne vorherige Ankündigung zu ändern.
+        </p>
     </div>
 
-    <script src="js/shop.js"></script>
+    <section class="content shop-grid" id="products">
+        <!-- Produkte werden hier per JS eingefügt -->
+    </section>
 
-    <div class="footer">
-        &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
+    <aside class="cart-panel" id="cartPanel">
+        <h3>Warenkorb <span id="cartCount">(0)</span></h3>
+        <ul id="cartItems"></ul>
+        <div class="cart-total">Gesamt: <span id="cartTotal">0.00 €</span></div>
+        <button id="checkoutBtn" class="btn">Zur Kasse</button>
+    </aside>
+</div>
+
+<div id="productDetail" class="product-detail hidden">
+    <div class="product-detail-content">
+        <span id="closeDetail" class="close-btn"></span>
+        <h2 id="detailTitle"></h2>
+        <div class="variant-section">
+            <h4></h4>
+            <div id="variantOptions" class="variant-options">
+                <!-- Varianten per JS -->
+            </div>
+        </div>
+        <div class="description-section">
+            <h4></h4>
+            <p id="detailDescription"></p>
+        </div>
+
     </div>
+</div>
+
+<script src="js/shop.js"></script>
+
+<div class="footer">
+    &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
+</div>
 
 </body>
 </html>
