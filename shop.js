@@ -23,7 +23,7 @@ const products = [
     },
     {
         id: 'p2',
-        name: 'AlsterTech Ladekabel',
+        name: 'AlsterTech Optik irgendwas',
         price: 9.99,
         soldOut: false,
         variantPrices: {
