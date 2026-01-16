@@ -15,3 +15,13 @@ Kopfhörer
 , Individuelles
 , Spektrometer
 , Linsen
+
+
+TODO:
+
+- warenkorb entfernen
+- "in den Warenkorb" Knöpfe entfernen
+- Message bei `Produkten` "Bitte schreibt uns per Email, um ein Produkt zu erstellen"
+- `Anmeldung` entfernen
+- `Kontakt` mit `mailto` command, we can specify subject` see:[https://stackoverflow.com/questions/4782068/can-i-set-subject-content-of-email-using-mailto]
+- `Home` Seite mit was wir sind, was wir anbieten; bild von uns
