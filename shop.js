@@ -2,7 +2,7 @@
 const products = [
     {
         id: 'p1',
-        name: 'AlsterTech Kopfhörer',
+        name: 'tolle Kopfhörer',
         price: 49.99,
         soldOut: false,
         variantPrices: {
