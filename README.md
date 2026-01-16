@@ -9,3 +9,9 @@ https://goethegymnasium-weimar.de/schulelerfirma/schulerfirma-produkte
 https://shops.schul.ag
 
 Produkte auf unsere Angebote ändern
+
+Kopfhörer 
+3D Modelle Volumen berechnen
+Individuelles
+Spektrometer
+Linsen
