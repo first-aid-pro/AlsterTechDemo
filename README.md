@@ -10,8 +10,8 @@ https://shops.schul.ag
 
 Produkte auf unsere Angebote ändern
 
-Kopfhörer 
-3D Modelle Volumen berechnen
-Individuelles
-Spektrometer
-Linsen
+Kopfhörer
+, 3D Modelle Volumen berechnen
+, Individuelles
+, Spektrometer
+, Linsen
