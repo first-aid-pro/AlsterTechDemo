@@ -6,66 +6,26 @@
     <title>Produktdetails</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/favicon.ico">
-    <style>
-        .product-page {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-        }
-        .product-left, .product-right {
-            flex: 1 1 300px;
-        }
-        .product-left img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .thumbnail-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .thumbnail-container img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            cursor: pointer;
-            border: 2px solid transparent;
-            border-radius: 5px;
-        }
-        .thumbnail-container img.selected {
-            border-color: #333;
-        }
-        .variant-btn {
-            margin: 5px;
-            padding: 5px 10px;
-            border: 1px solid #333;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .variant-btn.selected {
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
 </head>
-<body>
+<body class="site-body">
 
-<nav class="navbar">
-    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Logo"></a>
+<nav class="navbar home-navbar" aria-label="Hauptnavigation">
+    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Startseite"><img src="img/AlsterTech.jpeg" alt=""><span>AlsterTech</span></a>
     <ul class="nav-menu">
-        <li class="nav-item"><a href="shop.html">Zurück zum Shop</a></li>
+        <li class="nav-item"><a href="aboutUs.html">Über uns</a></li>
+        <li class="nav-item"><a href="shop.html">Angebote</a></li>
+        <li class="nav-item"><a href="contact.html">Kontakt</a></li>
     </ul>
 </nav>
 
-<div class="container product-page">
+<main class="container site-main product-page">
 
-    <div class="product-left">
+    <section class="product-left product-gallery">
         <img id="mainProductImg" alt="Produktbild">
         <div id="thumbnailContainer" class="thumbnail-container"></div>
-    </div>
+    </section>
 
-    <div class="product-right">
+    <section class="product-right product-info">
         <h1 id="productName"></h1>
         <p class="price" id="productPrice"></p>
 
@@ -77,9 +37,9 @@
 
         <button id="addToCart" class="btn">In den Warenkorb</button>
         <a id="pdfDownload" href="#" target="_blank" class="btn pdf-btn" style="display:none;">PDF herunterladen</a>
-    </div>
+    </section>
 
-</div>
+</main>
 
 <script src="js/shop.js"></script>
 <script>
@@ -166,6 +126,12 @@
         }
     }
 </script>
+
+<footer class="footer home-footer">
+    <a href="index.html">AlsterTech</a>
+    <span>&copy; 2026 Schülerfirma. Alle Rechte vorbehalten.</span>
+    <a href="contact.html#impressum">Impressum</a>
+</footer>
 
 </body>
 </html>

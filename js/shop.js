@@ -9,7 +9,7 @@ const products = [
 
 // Render products
 const productsEl = document.getElementById('products');
-products.forEach(p => {
+if (productsEl) products.forEach(p => {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.innerHTML = `
@@ -28,6 +28,9 @@ function saveCart(c){ localStorage.setItem('cart', JSON.stringify(c)); }
 function updateCartUI(){
     const cart = getCart();
     const itemsEl = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    const countEl = document.getElementById('cartCount');
+    if (!itemsEl || !totalEl || !countEl) return;
     itemsEl.innerHTML = '';
     let total = 0; let count = 0;
     for(const id in cart){
@@ -39,8 +42,8 @@ function updateCartUI(){
         itemsEl.appendChild(li);
         total += p.price*qty; count += qty;
     }
-    document.getElementById('cartTotal').textContent = total.toFixed(2) + ' €';
-    document.getElementById('cartCount').textContent = `(${count})`;
+    totalEl.textContent = total.toFixed(2) + ' €';
+    countEl.textContent = `(${count})`;
 }
 
 document.addEventListener('click', e => {
@@ -53,7 +56,8 @@ document.addEventListener('click', e => {
     }
 });
 
-document.getElementById('checkoutBtn').addEventListener('click', ()=>{
+const checkoutBtn = document.getElementById('checkoutBtn');
+if (checkoutBtn) checkoutBtn.addEventListener('click', ()=>{
     const cart = getCart();
     if(Object.keys(cart).length===0){ alert('Ihr Warenkorb ist leer.'); return; }
     // Very simple checkout simulation
@@ -63,4 +67,4 @@ document.getElementById('checkoutBtn').addEventListener('click', ()=>{
 });
 
 // Initial UI
-updateCartUI();
+if (document.getElementById('cartItems')) updateCartUI();

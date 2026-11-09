@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlsterTech</title>
+    <title>Angebote | AlsterTech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/favicon.ico">
     <style>
@@ -24,16 +24,16 @@
         }
     </style>
 </head>
-<body>
+<body class="site-body">
 
-<nav class="navbar">
-    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Logo"></a>
+    <nav class="navbar home-navbar" aria-label="Hauptnavigation">
+    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Startseite"><img src="img/AlsterTech.jpeg" alt=""><span>AlsterTech</span></a>
     <ul class="nav-menu">
         <li class="nav-item">
             <a href="aboutUs.html">Über uns</a>
             <ul class="dropdown">
                 <li><a href="aboutUs.html#team">Team</a></li>
-                <li><a href="#">Geschichte</a></li>
+                <li><a href="aboutUs.html#geschichte">Geschichte</a></li>
             </ul>
         </li>
         <li class="nav-item">
@@ -50,23 +50,24 @@
     </ul>
 </nav>
 
-<div class="container">
-    <header class="content">
-        <h1>Unser Shop</h1>
-        <p>Produkte von AlsterTech — hochwertig, nachhaltig und nutzerfreundlich.</p>
+<main class="container site-main shop-page">
+    <header class="site-page-header">
+        <p class="home-eyebrow"><span></span> Entdecken und ausprobieren</p>
+        <h1>Unsere Angebote</h1>
+        <p>Technik zum Anfassen und Ideen für den Unterricht.</p>
     </header>
 
-    <div class="disclaimer" style="margin: 10px 0; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px; text-align: center;">
+    <div class="shop-notice">
         <p>
-            Hinweis: Alle Angebote gelten nur solange der Vorrat reicht. Die Schülerfirma behält sich das Recht vor, Bestellungen abzulehnen oder Angebote ohne vorherige Ankündigung zu ändern. <br> Aufgrund aktueller Wartungsarbeiten müssten Sie momentan zum Kauf eines Produkts, per Mail Kontakt mit uns aufnehmen.
+            Aufgrund aktueller Wartungsarbeiten ist der direkte Kauf momentan nicht verfügbar. Bei Interesse an einem Angebot schreiben Sie uns bitte per E-Mail.
         </p>
     </div>
 
-    <section class="content shop-grid" id="products">
+    <section class="shop-grid" id="products" aria-label="AlsterTech Angebote">
         <!-- Produkte werden hier per JS eingefügt -->
     </section>
     
-</div>
+</main>
 
 <div id="productDetail" class="product-detail hidden">
     <div class="product-detail-content">
@@ -88,9 +89,11 @@
 
 <script src="js/shop.js"></script>
 
-<div class="footer">
-    &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
-</div>
+<footer class="footer home-footer">
+    <a href="index.html">AlsterTech</a>
+    <span>&copy; 2026 Schülerfirma. Alle Rechte vorbehalten.</span>
+    <a href="contact.html#impressum">Impressum</a>
+</footer>
 
 </body>
 </html>

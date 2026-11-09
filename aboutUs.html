@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlsterTech</title>
+    <title>Über uns | AlsterTech</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="site-body">
 
-    <nav class="navbar">
-    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Logo"></a>
+    <nav class="navbar home-navbar" aria-label="Hauptnavigation">
+    <a href="index.html" id="home" class="logo" aria-label="AlsterTech Startseite"><img src="img/AlsterTech.jpeg" alt=""><span>AlsterTech</span></a>
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="aboutUs.html">Über uns</a>
                 <ul class="dropdown">
                     <li><a href="aboutUs.html#team">Team</a></li>
-                    <li><a href="#">Geschichte</a></li>
+                    <li><a href="aboutUs.html#geschichte">Geschichte</a></li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a href="shop.html">Shop</a>
+            <li class="nav-item"><a href="shop.html">Shop</a></li>
             <li class="nav-item">
                 <a href="contact.html">Kontakt</a>
                 <ul class="dropdown">
@@ -30,7 +29,7 @@
         </ul>
     </nav>
 
-    <main class="container about-page">
+    <main class="container site-main about-page">
         <header class="about-hero content">
             <div class="hero-text">
                 <h1>Über AlsterTech</h1>
@@ -39,7 +38,7 @@
 Unser Anspruch: gute Technik und Produkte. </p>
             </div>
             <div class="hero-image">
-                <img src="img/AlsterTech2.jpeg" alt="Team Foto">
+                <img src="img/AlsterTech2.jpeg" alt="AlsterTech Logo">
             </div>
         </header>
 
@@ -54,7 +53,7 @@ Unser Anspruch: gute Technik und Produkte. </p>
                 <li>Offen & kollaborativ: Wir teilen Wissen und lernen ständig dazu.</li>
             </ul>
         </section>
-        <section class="content about-section">
+        <section id="geschichte" class="content about-section">
             <h2>Unsere Geschichte</h2>
             <p>Gegründet im Jahr 2025 von einer Gruppe technikbegeisterter Schüler. sonstiges...</p>
             <p>Unser Wachstum basiert auf dem Feedback unserer Nutzer und der Leidenschaft unseres Teams, ständig bessere Lösungen zu entwickeln.</p>
@@ -91,6 +90,7 @@ Unser Anspruch: gute Technik und Produkte. </p>
                     <h4>Lilli König</h4>
                     <p class="role">Schatzmeister</p>
                     <p>Lilli ist verantwortlich für die Finanzen und das Budget des Unternehmens.</p>
+                </article>
             </div>
         </section>
 
@@ -104,9 +104,11 @@ Unser Anspruch: gute Technik und Produkte. </p>
         </section>
     </main>
 
-    <div class="footer">
-        &copy; 2025 Schülerfirma. Alle Rechte vorbehalten.
-    </div>
+    <footer class="footer home-footer">
+        <a href="index.html">AlsterTech</a>
+        <span>&copy; 2026 Schülerfirma. Alle Rechte vorbehalten.</span>
+        <a href="contact.html#impressum">Impressum</a>
+    </footer>
 
 </body>
 </html>
