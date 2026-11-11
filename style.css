@@ -572,6 +572,12 @@ body {
 .team-member h4 { margin: 16px 0 4px; color: var(--home-ink); font-size: 1rem; }
 .team-member .role { margin: 0 0 8px; color: var(--home-teal); font-size: .88rem; font-weight: 700; }
 .team-member p:last-child { margin: 0; font-size: .9rem; }
+.site-main .team-section { padding: clamp(20px, 4vw, 36px); border: 1px solid #d4dfd9; border-top: 4px solid var(--home-orange); background: #e8f0eb; box-shadow: 0 12px 28px rgba(23, 60, 61, .1); }
+.team-section h2 { margin-bottom: 8px; }
+.team-section > p { max-width: 760px; margin: 0; }
+.team-photo { max-width: 1100px; margin: 28px auto 0; padding: 12px; border: 1px solid #cbd7d1; background: #fff; box-shadow: 0 4px 14px rgba(23, 60, 61, .08); }
+.team-photo img { display: block; width: 100%; max-height: min(72vh, 760px); border: 5px solid #f1f5f1; box-sizing: border-box; object-fit: contain; object-position: center; }
+.team-photo figcaption { margin-top: 12px; color: var(--home-muted); font-size: .9rem; text-align: center; }
 .about-page .cta { margin-top: 58px; padding: 32px; background: #173c3d; }
 .about-page .cta h2, .about-page .cta p { color: #fff; }
 .about-page .cta p { color: #c4d6d1; }
@@ -593,7 +599,10 @@ body {
 .contact-page .site-page-header { margin-bottom: 34px; }
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); align-items: start; gap: 28px; }
 .contact-form-section h2, .contact-info-block h2 { margin: 0 0 18px; font-size: 1.45rem; }
+.contact-maintenance-notice { margin: 0 0 18px; padding: 14px 18px; background: #b42318; color: #fff; font-weight: 700; }
+.contact-maintenance-notice a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .contact-form { padding: 24px; border: 1px solid #e1e8e2; background: #fff; }
+.contact-form fieldset { margin: 0; padding: 0; border: 0; }
 .contact-form label { display: block; margin-bottom: 16px; color: var(--home-ink); font-size: .92rem; font-weight: 650; }
 .contact-form label span { color: var(--home-orange); }
 .contact-form input, .contact-form textarea { display: block; width: 100%; margin-top: 7px; padding: 11px 12px; box-sizing: border-box; border: 1px solid #cbd7d1; border-radius: 3px; background: #fbfcfa; color: var(--home-ink); font: inherit; }

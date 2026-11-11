@@ -38,27 +38,29 @@
 
         <div class="contact-grid">
             <section id="Kontaktformular" class="contact-form-section" aria-labelledby="contact-form-title">
+                <p class="contact-maintenance-notice">In Arbeit, bitte kontaktieren Sie uns vorübergehend erstmal per Mail: <a href="mailto:kontakt@alstertech.de">kontakt@alstertech.de</a></p>
                 <h2 id="contact-form-title">Nachricht senden</h2>
                 <form id="contactForm" class="contact-form">
-                    <label for="contactName">Name <span aria-hidden="true">*</span>
-                        <input id="contactName" name="name" type="text" autocomplete="name" required>
-                    </label>
-                    <label for="contactEmail">E-Mail <span aria-hidden="true">*</span>
-                        <input id="contactEmail" name="email" type="email" autocomplete="email" required>
-                    </label>
-                    <label for="contactSubject">Betreff
-                        <input id="contactSubject" name="subject" type="text">
-                    </label>
-                    <label for="contactMessage">Nachricht <span aria-hidden="true">*</span>
-                        <textarea id="contactMessage" name="message" rows="5" required></textarea>
-                    </label>
-                    <div class="form-actions">
-                        <button class="home-button home-button-primary" type="submit">Nachricht senden <span aria-hidden="true">↗</span></button>
-                        <button id="clearBtn" class="contact-clear" type="button">Leeren</button>
-                    </div>
-                    <p id="contactMsg" class="contact-message" aria-live="polite"></p>
+                    <fieldset disabled>
+                        <label for="contactName">Name <span aria-hidden="true">*</span>
+                            <input id="contactName" name="name" type="text" autocomplete="name" required>
+                        </label>
+                        <label for="contactEmail">E-Mail <span aria-hidden="true">*</span>
+                            <input id="contactEmail" name="email" type="email" autocomplete="email" required>
+                        </label>
+                        <label for="contactSubject">Betreff
+                            <input id="contactSubject" name="subject" type="text">
+                        </label>
+                        <label for="contactMessage">Nachricht <span aria-hidden="true">*</span>
+                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                        </label>
+                        <div class="form-actions">
+                            <button class="home-button home-button-primary" type="submit">Nachricht senden <span aria-hidden="true">↗</span></button>
+                            <button id="clearBtn" class="contact-clear" type="button">Leeren</button>
+                        </div>
+                        <p id="contactMsg" class="contact-message" aria-live="polite"></p>
+                    </fieldset>
                 </form>
-                <p class="contact-demo-note">Demo-Hinweis: Nachrichten werden nur lokal im Browser gespeichert und nicht per E-Mail versendet.</p>
             </section>
 
             <aside class="contact-aside">
@@ -85,7 +87,6 @@
     </section>
     </main>
 
-    <script src="js/contact.js"></script>
     <footer class="footer home-footer">
         <a href="index.html">AlsterTech</a>
         <span>&copy; 2026 Schülerfirma. Alle Rechte vorbehalten.</span>
