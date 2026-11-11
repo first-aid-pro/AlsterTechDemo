@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produktdetails</title>
+    <title>Angebote | AlsterTech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/favicon.ico">
 </head>
@@ -18,114 +18,17 @@
     </ul>
 </nav>
 
-<main class="container site-main product-page">
-
-    <section class="product-left product-gallery">
-        <img id="mainProductImg" alt="Produktbild">
-        <div id="thumbnailContainer" class="thumbnail-container"></div>
-    </section>
-
-    <section class="product-right product-info">
-        <h1 id="productName"></h1>
-        <p class="price" id="productPrice"></p>
-
-        <h3>Varianten</h3>
-        <div id="variantOptions" class="variant-options"></div>
-
-        <h3>Beschreibung</h3>
-        <p id="productDescription"></p>
-
-        <button id="addToCart" class="btn">In den Warenkorb</button>
-        <a id="pdfDownload" href="#" target="_blank" class="btn pdf-btn" style="display:none;">PDF herunterladen</a>
-    </section>
-
+<main class="container site-main shop-page">
+    <header class="site-page-header">
+        <p class="home-eyebrow"><span></span> Unser Angebot</p>
+        <h1>Shop im Aufbau</h1>
+        <p>Unsere Produktseiten sind gerade in Arbeit.</p>
+    </header>
+    <div class="shop-notice" role="status">
+        <p>Produktinformationen werden hier zeitnah veröffentlicht.</p>
+    </div>
+    <a class="home-button home-button-primary" href="shop.html">Zur Shopübersicht <span aria-hidden="true">↗</span></a>
 </main>
-
-<script src="js/shop.js"></script>
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get("id");
-
-    if (!products || products.length === 0) {
-        document.body.innerHTML = "<h2>Produktdaten nicht geladen!</h2>";
-    } else {
-        const product = products.find(p => p.id === productId);
-
-        if (!product) {
-            document.body.innerHTML = "<h2>Produkt nicht gefunden.</h2>";
-        } else {
-            const mainImg = document.getElementById("mainProductImg");
-            const thumbnailContainer = document.getElementById("thumbnailContainer");
-            const variantContainer = document.getElementById("variantOptions");
-            const productName = document.getElementById("productName");
-            const productPrice = document.getElementById("productPrice");
-            const productDescription = document.getElementById("productDescription");
-            const pdfDownload = document.getElementById("pdfDownload");
-
-            productName.textContent = product.name;
-            productPrice.textContent = product.price.toFixed(2) + " €";
-            productDescription.textContent = product.description || "Keine Beschreibung verfügbar.";
-
-            if (product.pdf) {
-                pdfDownload.href = product.pdf;
-                pdfDownload.style.display = "inline-block";
-            }
-
-            let currentVariant = product.variants ? product.variants[0] : null;
-            let selectedVariant = currentVariant;
-
-            function loadImagesForVariant(variant) {
-                thumbnailContainer.innerHTML = '';
-                const images = (product.variantImages && product.variantImages[variant]) || product.images || [product.img];
-                mainImg.src = images[0];
-                images.forEach((imgSrc, index) => {
-                    const thumb = document.createElement("img");
-                    thumb.src = imgSrc;
-                    if (index === 0) thumb.classList.add("selected");
-                    thumb.onclick = () => {
-                        mainImg.src = imgSrc;
-                        document.querySelectorAll("#thumbnailContainer img").forEach(i => i.classList.remove("selected"));
-                        thumb.classList.add("selected");
-                    };
-                    thumbnailContainer.appendChild(thumb);
-                });
-            }
-
-            if (product.variants && product.variants.length > 0) {
-                product.variants.forEach(v => {
-                    const btn = document.createElement("button");
-                    btn.className = "variant-btn";
-                    btn.textContent = v;
-                    btn.onclick = () => {
-                        currentVariant = v;
-                        selectedVariant = v;
-                        document.querySelectorAll(".variant-btn").forEach(b => b.classList.remove("selected"));
-                        btn.classList.add("selected");
-                        loadImagesForVariant(v);
-                    };
-                    variantContainer.appendChild(btn);
-                });
-                loadImagesForVariant(currentVariant);
-                document.querySelector(".variant-btn").classList.add("selected");
-            } else {
-                loadImagesForVariant(null);
-            }
-
-            document.getElementById("addToCart").addEventListener("click", () => {
-                if (!selectedVariant && product.variants?.length) {
-                    alert("Bitte eine Variante auswählen!");
-                    return;
-                }
-                if (typeof addToCart === "function") {
-                    addToCart(productId, selectedVariant);
-                    alert("Zum Warenkorb hinzugefügt!");
-                } else {
-                    alert("Funktion zum Hinzufügen zum Warenkorb nicht verfügbar.");
-                }
-            });
-        }
-    }
-</script>
 
 <footer class="footer home-footer">
     <a href="index.html">AlsterTech</a>
